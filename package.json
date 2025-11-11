@@ -1,0 +1,24 @@
+{
+  "name": "tools",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bunx astro build",
+    "deploy": "bunx wrangler deploy",
+    "dev": "bunx astro dev"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.16",
+    "@astrojs/solid-js": "^5.1.2",
+    "astro": "^5.15.3",
+    "solid-js": "^1.9.10",
+    "tailwindcss": "^4.1.16"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "wrangler": "^4.45.3"
+  },
+  "overrides": {
+    "esbuild": "^0.25.11"
+  }
+}
