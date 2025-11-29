@@ -10,15 +10,15 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "@astrojs/solid-js": "^5.1.2",
-    "astro": "^5.15.3",
+    "astro": "^5.16.2",
     "solid-js": "^1.9.10",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
-    "wrangler": "^4.45.3"
+    "wrangler": "^4.51.0"
   },
   "overrides": {
-    "esbuild": "^0.25.11"
+    "esbuild": "^0.25.12"
   }
 }
