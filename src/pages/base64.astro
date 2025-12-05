@@ -1,10 +1,12 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 
-const title = "Tools";
+import App from "~/tools/base64.tsx";
+
+const title = "Base64 decoder/encoder";
 const description = title;
 ---
 
 <Layout {title} {description}>
-  <h1>Tools</h1>
+  <App client:load />
 </Layout>
