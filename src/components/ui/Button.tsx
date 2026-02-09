@@ -1,5 +1,5 @@
-import { splitProps } from "solid-js";
 import type { JSX } from "solid-js";
+import { splitProps } from "solid-js";
 
 export type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
 export type ButtonSize = "sm" | "md" | "lg";
@@ -9,7 +9,7 @@ export type ButtonProps = JSX.ButtonHTMLAttributes<HTMLButtonElement> & {
   size?: ButtonSize;
 };
 
-export default function Button(props: ButtonProps) {
+export default function Button(props: ButtonProps): JSX.Element {
   const [local, rest] = splitProps(props, ["variant", "size", "class"]);
 
   const variant = local.variant ?? "primary";
@@ -17,7 +17,7 @@ export default function Button(props: ButtonProps) {
   const className = local.class;
 
   const base =
-    "inline-flex items-center justify-center rounded-md font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-flex items-center justify-center rounded-md font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer";
 
   const variants: Record<ButtonVariant, string> = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
