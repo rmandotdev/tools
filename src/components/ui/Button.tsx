@@ -1,10 +1,10 @@
 import type { JSX } from "solid-js";
 import { splitProps } from "solid-js";
 
-export type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
-export type ButtonSize = "sm" | "md" | "lg";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
+type ButtonSize = "sm" | "md" | "lg";
 
-export type ButtonProps = JSX.ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonProps = JSX.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
 };

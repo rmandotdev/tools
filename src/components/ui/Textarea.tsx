@@ -1,10 +1,10 @@
 import type { JSX } from "solid-js";
 import { splitProps } from "solid-js";
 
-export type TextareaVariant = "primary" | "secondary" | "ghost";
-export type TextareaSize = "sm" | "md" | "lg";
+type TextareaVariant = "primary" | "secondary" | "ghost";
+type TextareaSize = "sm" | "md" | "lg";
 
-export type TextareaProps = JSX.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+type TextareaProps = JSX.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   variant?: TextareaVariant;
   size?: TextareaSize;
 };
