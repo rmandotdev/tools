@@ -11,6 +11,17 @@ export default function ImagePasteHandler() {
     previewUrl: string;
   }>();
 
+  const triggerDownload = (file: File) => {
+    const url = URL.createObjectURL(file);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = file.name || "image.png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 100);
+  };
+
   const handlePaste = (e: ClipboardEvent) => {
     const items = e.clipboardData?.items;
     if (!items) return;
@@ -33,22 +44,6 @@ export default function ImagePasteHandler() {
         }
       }
     }
-  };
-
-  const triggerDownload = (file: File) => {
-    const url = URL.createObjectURL(file);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = file.name || "image.png";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setTimeout(() => URL.revokeObjectURL(url), 100);
-  };
-
-  const handleManualDownload = () => {
-    const current = image();
-    if (current) triggerDownload(current.file);
   };
 
   onCleanup(() => {
@@ -85,8 +80,25 @@ export default function ImagePasteHandler() {
               class="max-w-full max-h-100 object-contain rounded-lg border border-gray-300 shadow-sm"
             />
 
-            <div class="mt-5">
-              <Button onClick={handleManualDownload}>Download Image</Button>
+            <div class="mt-5 flex gap-3">
+              <Button
+                onClick={() => {
+                  const current = image();
+                  if (current) triggerDownload(current.file);
+                }}
+              >
+                Download Image
+              </Button>
+              <Button
+                onClick={() => {
+                  const current = image();
+                  if (current) {
+                    window.open(current.previewUrl, "_blank");
+                  }
+                }}
+              >
+                Open in New Tab
+              </Button>
             </div>
           </div>
         )}
