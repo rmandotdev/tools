@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "lint": "biome lint",
+    "lint": "biome check",
     "format": "biome check --write --linter-enabled=false",
     "build": "astro build",
     "deploy": "wrangler deploy",
@@ -16,16 +16,17 @@
     "#tools/*": "./src/tools/*.tsx"
   },
   "dependencies": {
-    "astro": "^5.17.2",
+    "astro": "^6.0.8",
     "solid-js": "^1.9.11",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
-    "@astrojs/solid-js": "^5.1.2",
-    "@biomejs/biome": "2.4.0",
-    "@tailwindcss/vite": "^4.1.18",
+    "@astrojs/solid-js": "^6.0.1",
+    "@biomejs/biome": "2.4.8",
+    "@gameroman/config": "^0.0.3",
+    "@tailwindcss/vite": "^4.2.2",
     "typescript": "^5.9.3",
-    "wrangler": "^4.65.0"
+    "wrangler": "^4.76.0"
   },
   "overrides": {
     "esbuild": "^0.27.3"
