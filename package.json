@@ -16,17 +16,17 @@
     "#tools/*": "./src/tools/*.tsx"
   },
   "dependencies": {
-    "astro": "^6.0.8",
-    "solid-js": "^1.9.11",
+    "astro": "^6.1.2",
+    "solid-js": "^1.9.12",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@astrojs/solid-js": "^6.0.1",
-    "@biomejs/biome": "2.4.8",
-    "@gameroman/config": "^0.0.3",
+    "@biomejs/biome": "2.4.10",
+    "@gameroman/config": "^0.0.5",
     "@tailwindcss/vite": "^4.2.2",
-    "typescript": "^5.9.3",
-    "wrangler": "^4.76.0"
+    "typescript": "^6.0.2",
+    "wrangler": "^4.79.0"
   },
   "overrides": {
     "esbuild": "^0.27.3"

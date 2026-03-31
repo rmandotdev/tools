@@ -34,6 +34,7 @@ export default function Switcher<T>(props: SwitcherProps<T>): JSX.Element {
           const isActive = () => option.value === props.value();
 
           return (
+            // biome-ignore lint/a11y/useSemanticElements: using <input type="radio"> does not work here
             <button
               type="button"
               role="radio"
