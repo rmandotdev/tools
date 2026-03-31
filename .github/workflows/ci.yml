@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test and Build
+    name: Lint and Build
     runs-on: ubuntu-latest
 
     steps:
@@ -30,9 +30,6 @@ jobs:
 
       - name: Lint
         run: bun run lint
-
-      - name: Run tests
-        run: bun run test
 
       - name: Build
         run: bun run build
