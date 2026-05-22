@@ -26,7 +26,7 @@
     "@gameroman/config": "0.1.0",
     "@tailwindcss/vite": "4.3.0",
     "typescript": "6.0.3",
-    "wrangler": "4.93.0"
+    "wrangler": "4.93.1"
   },
   "overrides": {
     "@babel/helper-module-imports": "7.28.6",
