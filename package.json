@@ -13,7 +13,8 @@
     "deploy": "wrangler deploy",
     "dev": "astro dev",
     "format": "biome check --write --linter-enabled=false",
-    "lint": "biome check"
+    "lint": "biome check",
+    "preview": "astro preview"
   },
   "overrides": {
     "@babel/core": "7.29.7",
