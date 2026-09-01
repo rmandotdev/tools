@@ -1,8 +1,21 @@
 ---
+import LinkCard from "#components/LinkCard";
+import LinkCardGroup from "#components/LinkCardGroup";
 import Layout from "#layout";
 
 const title = "Tools";
 const description = title;
 ---
 
-<Layout {title} {description}> <h1>Tools</h1> </Layout>
+<Layout {title} {description}>
+  <div
+    class="h-screen text-neutral-800 dark:text-neutral-300 bg-neutral-200 dark:bg-black p-20"
+  >
+    <LinkCardGroup>
+      <LinkCard title="Base 64 Text Encoder and Decoder" href="/base64" />
+      <LinkCard title="Clipbaord Image Previewer and Downloader" href="/img" />
+
+      <LinkCard title="Source code" href="/github" />
+    </LinkCardGroup>
+  </div>
+</Layout>
