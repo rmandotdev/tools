@@ -5,14 +5,15 @@
   "imports": {
     "#layout": "./src/layouts/Layout.astro",
     "#styles": "./src/styles/global.css",
-    "#components/*": "./src/components/*.tsx",
+    "#components/*": "./src/components/*.astro",
+    "#ui/*": "./src/components/ui/*.tsx",
     "#tools/*": "./src/tools/*.tsx"
   },
   "scripts": {
     "build": "astro build",
     "deploy": "wrangler deploy",
     "dev": "astro dev",
-    "format": "biome check --write --linter-enabled=false",
+    "format": "biome check --write",
     "lint": "biome check",
     "preview": "astro preview"
   },

@@ -1,7 +1,7 @@
 import { createSignal } from "solid-js";
 
-import Button from "#components/ui/Button";
-import Textarea from "#components/ui/Textarea";
+import Button from "#ui/Button";
+import Textarea from "#ui/Textarea";
 
 export default function () {
   const [text, setText] = createSignal("");

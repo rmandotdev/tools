@@ -1,6 +1,7 @@
 import { createSignal, onCleanup, Show } from "solid-js";
-import Button from "#components/ui/Button";
-import Switcher from "#components/ui/Switcher";
+
+import Button from "#ui/Button";
+import Switcher from "#ui/Switcher";
 
 export default function ImagePasteHandler() {
   type Mode = "preview" | "download";
