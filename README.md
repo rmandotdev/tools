@@ -1,3 +1,3 @@
 # Tools
 
-<https://tools.rman.dev>
+[tools.rman.dev](https://tools.rman.dev)
